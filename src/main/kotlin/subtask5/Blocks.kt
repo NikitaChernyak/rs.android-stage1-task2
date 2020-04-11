@@ -31,7 +31,7 @@ class Blocks {
                         dates.add(blockA[i] as LocalDate)
                 val now = LocalDate.now()
                 for (i in dates.indices) {
-                    result = dates.max()!!
+                    result = dates.max() ?: now
                     if (result > now) {
                         dates.remove(result)
                         continue
